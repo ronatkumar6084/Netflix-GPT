@@ -28,6 +28,14 @@
  -fetch data for trailer video
  -updatestore with trailer video data
  -Embede the youtube video and make it autoplay and mute
+ -Build secondary component
+ -Build movie list
+ -Build movie card
+ -TMDB image CDN
+ -made the browse page with tailwind css
+ -usePopularmovies custom hooks
+ 
+
 
 # Features
  -Login/Signup
