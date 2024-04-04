@@ -6,7 +6,8 @@ import { auth } from '../utils/firebase';
 // import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userslice';
-import { bgimg } from '../utils/constant';
+import { bg_img } from '../utils/constant';
+import { user_image } from '../utils/constant';
 
 const Login = () => {
      const [isSigninForm, setIsSigninForm] = useState(true);
@@ -41,7 +42,7 @@ const Login = () => {
             // navigate("/browse");
             updateProfile(user, {
               displayName: name.current.value,
-              photoURL:"https://media.licdn.com/dms/image/D5635AQEUDzUWjqFrHw/profile-framedphoto-shrink_100_100/0/1704266259018?e=1712160000&v=beta&t=ASbTpLHNwoHQiNvFJa--cJwWy4fAsafHHQjJwLLLEMw2",
+              photoURL:user_image,
              })
               .then(() => {
                 const {uid, email, displayName, photoURL} = auth.currentUser;
@@ -86,7 +87,7 @@ const Login = () => {
     <div>
       <Header/>
       <div>
-      <img className='absolute' src={bgimg} alt="logo" />
+      <img className='absolute' src={bg_img} alt="logo" />
       </div>
       <form onSubmit={(e)=>e.preventDefault()}
       className="p-12 bg-black absolute w-3/12 my-32 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
@@ -126,3 +127,4 @@ const Login = () => {
 };
 
 export default Login;
+//https://media.licdn.com/dms/image/D5635AQEUDzUWjqFrHw/profile-framedphoto-shrink_100_100/0/1704266259018?e=1712160000&v=beta&t=ASbTpLHNwoHQiNvFJa--cJwWy4fAsafHHQjJwLLLEMw2
